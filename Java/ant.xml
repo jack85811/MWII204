@@ -1,0 +1,25 @@
+<project name="Java" default="" basedir=".">
+	<property environment="env" />
+	
+	<target name="prepare">
+		<mkdir dir="WebContent/WEB-INF/lib" />
+	</target>
+
+	<target name="jar" depends="prepare">
+		<jar basedir="bin" destfile="WebContent/WEB-INF/lib/Java.jar" includes="application/**"/>
+	</target>
+
+	<target name="deploy">
+		<copy file="rest.xml" todir="${CATALINA_HOME}/conf/Catalina/localhost" />
+	</target>
+
+	<target name="undeploy">
+		<delete file="${CATALINA_HOME}/conf/Catalina/localhost/rest.xml" />
+	</target>
+
+	<target name="clean">
+		<delete file="WebContent/WEB-INF/lib/Java.jar" />
+	</target>
+</project>
+
+<!-- resources//** service//** web/**-->

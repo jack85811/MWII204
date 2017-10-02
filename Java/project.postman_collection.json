@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Griizzly abts prohject",
+		"_postman_id": "5629ca0c-2fd2-ee64-4b94-318731246963",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"request": {
+				"url": "http://localhost:8080/rest/store/products/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productName\":\"grapefrit63636\",\n\t\"productCode\":\"gp-22\",\n\t\"description\":\"Tropica\",\n\t\"price\":\"3.222222\",\n\t\"starRating\":\"4.544444\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"url": "http://localhost:8080/rest/store/products/update",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"productId\" : \"59d009b3638ceb2634958a8b\",\r\n\t\"productName\": \"onion\",\r\n\t\"productCode\": \"GDD-2\",\r\n\t\"description\": \"tasty\",\r\n\t\"price\": 0.95,\r\n\t\"starRating\": 2.3\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "products/:id",
+			"request": {
+				"url": "http://localhost:8080/rest/store/products/59d009b3638ceb2634958a8b",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "products/:id/delete",
+			"request": {
+				"url": "http://localhost:8080/rest/store/products/59d009b3638ceb2634958a8b/delete",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "products/",
+			"request": {
+				"url": "http://localhost:8080/rest/store/products",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -12,8 +12,7 @@
 	--cors in nder web.xml nicht vergessen
 	
 --programieren
-	--filterdunktion
 	--vllt noch styles
 	--datensätze eintragen
-	--tests auf fehelr machen bspw preis mit .6stellen 
+	--vllt double werte auf null stellen
 	--postman collection exportieren und mit bereitstellen
